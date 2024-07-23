@@ -55,9 +55,9 @@ wasm-release: Makefile *.go */*.go $(GEN) wasm/wasm_exec.js wasm/wasm_exec.html
 	mv "$(shell go env GOPATH)/bin/js_wasm/wasm" wasm/grol.wasm
 	ls -lh wasm/*.wasm
 
-wasm/wasm_exec.js: Makefile
+#wasm/wasm_exec.js: Makefile
 #	cp "$(shell tinygo env TINYGOROOT)/targets/wasm_exec.js" ./wasm/
-	cp "$(shell tinygo env GOROOT)/misc/wasm/wasm_exec.js" ./wasm/
+#	cp "$(shell tinygo env GOROOT)/misc/wasm/wasm_exec.js" ./wasm/
 
 wasm/wasm_exec.html:
 	cp "$(shell go env GOROOT)/misc/wasm/wasm_exec.html" ./wasm/
